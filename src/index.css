@@ -2,95 +2,132 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Professional Portfolio Design System for ER. Saroj Acharya */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Professional blue-gray palette */
+    --background: 220 26% 98%;
+    --foreground: 222 47% 11%;
 
+    /* Professional government-appropriate blues */
+    --primary: 221 83% 53%;
+    --primary-foreground: 220 26% 98%;
+    --primary-glow: 221 83% 65%;
+
+    /* Elegant secondary tones */
+    --secondary: 215 25% 92%;
+    --secondary-foreground: 222 47% 11%;
+
+    /* Card system */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 47% 11%;
 
+    /* Interactive elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Muted tones */
+    --muted: 215 25% 92%;
+    --muted-foreground: 215 16% 47%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Accent for highlights */
+    --accent: 215 25% 92%;
+    --accent-foreground: 222 47% 11%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 26% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 220 26% 98%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Form elements */
+    --border: 215 31% 91%;
+    --input: 215 31% 91%;
+    --ring: 221 83% 53%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Layout */
+    --radius: 0.75rem;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Custom portfolio tokens */
+    --coffee: 25 95% 53%;
+    --skill-pill: 215 25% 95%;
+    --skill-pill-active: 221 83% 53%;
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(221 83% 65%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(215 25% 98%) 100%);
+    --shadow-elegant: 0 4px 20px hsl(221 83% 53% / 0.1);
+    --shadow-card: 0 2px 12px hsl(215 31% 91% / 0.5);
 
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (if needed) */
+    --sidebar-background: 220 26% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 220 26% 98%;
+    --sidebar-accent: 215 25% 92%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 215 31% 91%;
+    --sidebar-ring: 221 83% 53%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode palette */
+    --background: 222 47% 6%;
+    --foreground: 220 26% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Dark primary system */
+    --primary: 221 83% 65%;
+    --primary-foreground: 222 47% 6%;
+    --primary-glow: 221 83% 75%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    /* Dark secondary */
+    --secondary: 215 32% 17%;
+    --secondary-foreground: 220 26% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Dark cards */
+    --card: 215 32% 12%;
+    --card-foreground: 220 26% 96%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Dark interactive */
+    --popover: 215 32% 12%;
+    --popover-foreground: 220 26% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Dark muted */
+    --muted: 215 32% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Dark accent */
+    --accent: 215 32% 17%;
+    --accent-foreground: 220 26% 96%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Dark status */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 220 26% 96%;
+    --success: 142 76% 36%;
+    --success-foreground: 220 26% 96%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Dark forms */
+    --border: 215 32% 17%;
+    --input: 215 32% 17%;
+    --ring: 221 83% 65%;
+
+    /* Dark custom tokens */
+    --coffee: 25 95% 63%;
+    --skill-pill: 215 32% 20%;
+    --skill-pill-active: 221 83% 65%;
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 65%) 0%, hsl(221 83% 75%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(215 32% 12%) 0%, hsl(215 32% 15%) 100%);
+    --shadow-elegant: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 12px hsl(0 0% 0% / 0.4);
+
+    /* Dark sidebar */
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 220 26% 96%;
+    --sidebar-primary: 221 83% 65%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 215 32% 17%;
+    --sidebar-accent-foreground: 220 26% 96%;
+    --sidebar-border: 215 32% 17%;
+    --sidebar-ring: 221 83% 65%;
   }
 }
 
@@ -98,8 +135,116 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/50;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer components {
+  /* Hero gradient background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Card gradient background */
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  /* Elegant shadow */
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  /* Card shadow */
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Skill pill animations */
+  .skill-pill {
+    @apply px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200;
+    @apply bg-[hsl(var(--skill-pill))] text-[hsl(var(--foreground))];
+    @apply hover:bg-[hsl(var(--skill-pill-active))] hover:text-[hsl(var(--primary-foreground))];
+    @apply cursor-pointer transform hover:scale-105;
+  }
+
+  .skill-pill.active {
+    @apply bg-[hsl(var(--skill-pill-active))] text-[hsl(var(--primary-foreground))];
+  }
+
+  /* Coffee badge */
+  .coffee-badge {
+    @apply text-[hsl(var(--coffee))] font-semibold;
+  }
+
+  /* Smooth scroll */
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Animation classes */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
