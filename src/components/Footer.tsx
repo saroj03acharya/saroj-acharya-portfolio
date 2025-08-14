@@ -1,4 +1,4 @@
-import { Coffee, Github, Linkedin, Heart } from "lucide-react";
+import { Coffee, Github, Linkedin, Heart, Facebook, Instagram, Mail, Contact } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -14,7 +14,34 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://linkedin.com/in/sarojacharya"
+              href="https://www.facebook.com/adelinmoshy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+              aria-label="Facebook Profile"
+            >
+              <Facebook className="h-5 w-5 text-primary" />
+            </a>
+            <a
+              href="https://www.instagram.com/adelinmoshy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+              aria-label="Instagram Profile"
+            >
+              <Instagram className="h-5 w-5 text-primary" />
+            </a>
+            <a
+              href="tel:+9779867235042"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+              aria-label="Contact Profile"
+            >
+              <Contact className="h-5 w-5 text-primary" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/saroj-acharya-96b3ba1b6/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
@@ -23,7 +50,7 @@ const Footer = () => {
               <Linkedin className="h-5 w-5 text-primary" />
             </a>
             <a
-              href="https://github.com/sarojacharya"
+              href="https://github.com/saroj03acharya"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"

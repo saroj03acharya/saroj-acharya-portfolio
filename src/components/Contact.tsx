@@ -1,3 +1,4 @@
+// contact.tsx
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,6 +16,7 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -29,27 +31,43 @@ const Contact = () => {
     if (!formData.email.trim()) return "Email is required";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) return "Invalid email format";
     if (!formData.contact.trim()) return "Contact number is required";
-    if (!/^[0-9+\-\s\(\)]+$/.test(formData.contact)) return "Invalid contact number";
+    if (!/^[0-9+\-\s()]+$/.test(formData.contact)) return "Invalid contact number";
     if (!formData.message.trim()) return "Message is required";
     return null;
   };
 
   const submitContact = async (data: typeof formData) => {
+    // Google Apps Script web app URL
     const url = "https://script.google.com/macros/s/AKfycbw9ihTgXmUISUylRlEaWvur41V4ETrVi346In5u2dBVQNaot6z5frA_S6C_wZIoeLzr/exec";
+
+    // Add timestamp or any additional fields you want
     const payload = { ...data, timestamp: new Date().toISOString() };
-    
+
+    // Use a "simple" request (text/plain) to avoid CORS preflight in the browser.
     const res = await fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      headers: { "Content-Type": "text/plain;charset=UTF-8" },
+      body: JSON.stringify(payload),
     });
-    
-    return res.ok ? await res.json() : Promise.reject(await res.text());
+
+    const text = await res.text();
+    let parsed: any = null;
+    try {
+      parsed = JSON.parse(text);
+    } catch (err) {
+      parsed = { raw: text };
+    }
+
+    if (!res.ok) {
+      return Promise.reject(parsed);
+    }
+
+    return parsed;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const error = validateForm();
     if (error) {
       toast({
@@ -61,20 +79,40 @@ const Contact = () => {
     }
 
     setIsSubmitting(true);
-    
+    setStatus("sending"); // <-- show "Hold — Your message is sending"
+
     try {
-      await submitContact(formData);
+      const result = await submitContact(formData);
+
+      // Show success in UI
+      setStatus("success"); // <-- show "Your message was sent successfully"
       toast({
         title: "Message Sent!",
         description: "Thank you for reaching out. I'll get back to you soon!",
       });
+
       setFormData({ name: "", email: "", contact: "", message: "" });
-    } catch (error) {
+      console.log("submit result:", result);
+
+      // Auto-clear success status after 4 seconds
+      setTimeout(() => setStatus("idle"), 4000);
+    } catch (err: any) {
+      console.error("submit error:", err);
+      setStatus("error");
+      const serverMsg =
+        (err && err.message) ||
+        (err && err.status) ||
+        (err && err.raw) ||
+        "Failed to send message. Please try again.";
+
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: String(serverMsg),
         variant: "destructive",
       });
+
+      // Auto-clear error after 6 seconds
+      setTimeout(() => setStatus("idle"), 6000);
     } finally {
       setIsSubmitting(false);
     }
@@ -82,8 +120,27 @@ const Contact = () => {
 
   return (
     <section className="animate-slide-up">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Contact</h2>
-      
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Contact</h2>
+
+      {/* Status banner */}
+      <div className="max-w-2xl mx-auto mb-4">
+        {status === "sending" && (
+          <div className="p-3 rounded-md bg-yellow-50 border border-yellow-200 text-yellow-800 text-center">
+            Hold — Your message is sending
+          </div>
+        )}
+        {status === "success" && (
+          <div className="p-3 rounded-md bg-green-50 border border-green-200 text-green-800 text-center">
+            Your message was sent successfully
+          </div>
+        )}
+        {status === "error" && (
+          <div className="p-3 rounded-md bg-red-50 border border-red-200 text-red-800 text-center">
+            Something went wrong while sending your message
+          </div>
+        )}
+      </div>
+
       <Card className="max-w-2xl mx-auto shadow-card card-gradient">
         <CardHeader>
           <CardTitle>Get in Touch</CardTitle>
