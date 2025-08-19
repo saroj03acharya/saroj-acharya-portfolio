@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Coffee Badge */}
           <div className="flex items-center gap-2 coffee-badge">
             <Coffee className="h-5 w-5" />
-            <span className="font-semibold">Cup of Coffee ∞</span>
+            <span className="font-semibold">Copyright by Er. Saroj Acharya © 2025</span>
           </div>
 
           {/* Social Links */}
@@ -62,8 +62,8 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <span>Made</span>
-            <span>by ER. Saroj Acharya</span>
+            <span></span>
+            
           </div>
         </div>
       </div>

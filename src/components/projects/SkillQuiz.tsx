@@ -220,9 +220,7 @@ const SkillQuiz = () => {
         </Button>
       )}
 
-      <div className="text-xs text-muted-foreground text-center mt-6 p-4 bg-muted/30 rounded-lg">
-        💡 This quiz demonstrates conditional rendering, state management, and progressive disclosure
-      </div>
+      
     </div>
   );
 };

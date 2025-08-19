@@ -11,23 +11,21 @@ const ResumeTimeline = () => {
       id: 1,
       type: "education",
       title: "Bachelor of Engineering",
-      subtitle: "Computer Science",
-      institution: "Engineering College",
+      subtitle: "Computer Engineering",
       location: "Nepal",
-      period: "2016 - 2020",
-      description: "Graduated with honors, specialized in software engineering and web development. Completed capstone project on government digital services.",
+      period: "2017 - 2022",
+      description: "Graduated with honors, specialized in computer engineering and web development. Completed capstone project on government digital services.",
       icon: GraduationCap,
       color: "text-blue-600"
     },
     {
       id: 2,
       type: "work",
-      title: "Junior Developer",
-      subtitle: "Government IT Department",
-      institution: "Bagmati Province",
-      location: "Hetauda",
-      period: "2020 - 2022",
-      description: "Developed citizen service portals and administrative systems. Worked on digitizing government processes and improving accessibility.",
+      title: "Lecture",
+      subtitle: "Bachelor of Information Technology",
+      location: "Kawasoti, Nawalparasi",
+      period: "2022 - 2023",
+      description: "",
       icon: Briefcase,
       color: "text-green-600"
     },
@@ -46,12 +44,11 @@ const ResumeTimeline = () => {
     {
       id: 4,
       type: "work",
-      title: "Full-stack Developer",
-      subtitle: "Office of Chief Minister",
-      institution: "Bagmati Province",
-      location: "Hetauda",
-      period: "2022 - Present",
-      description: "Leading development of digital government solutions, implementing modern web technologies for citizen services and administrative efficiency.",
+      title: "System and Project Management",
+      subtitle: "Infomation and Communication Coordination Section",
+      location: "Office of the Chief Minister and Council of Ministers",
+      period: "2024 - Present",
+      description: "Leading development of digital government solutions, implementing modern web technologies for citizen services and administrative efficiency.Developed citizen service portals and administrative systems. Worked on digitizing government processes and improving accessibility.",
       icon: Briefcase,
       color: "text-green-600"
     }
@@ -121,10 +118,6 @@ const ResumeTimeline = () => {
             );
           })}
         </div>
-      </div>
-      
-      <div className="text-xs text-muted-foreground text-center mt-6 p-4 bg-muted/30 rounded-lg">
-        💡 This timeline demonstrates interactive UI development and state management
       </div>
     </div>
   );

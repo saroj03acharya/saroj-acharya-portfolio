@@ -179,10 +179,6 @@ button:hover {
           </div>
         </div>
       </div>
-
-      <div className="text-xs text-muted-foreground text-center mt-6 p-4 bg-muted/30 rounded-lg">
-        💡 This playground showcases real-time code execution and iframe sandboxing techniques
-      </div>
     </div>
   );
 };

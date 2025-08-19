@@ -8,16 +8,16 @@ const Hero = () => {
         {/* Coffee Badge */}
         <Badge variant="secondary" className="mb-6 coffee-badge text-lg px-4 py-2">
           <Coffee className="h-4 w-4 mr-2" />
-          Cup of Coffee ∞
+          Welcome with Cup of Coffee ∞
         </Badge>
 
         {/* Name and Title */}
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-          ER. Saroj Acharya
+          Er. Saroj Acharya
         </h1>
         
         <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-4">
-          Full-stack Developer
+          Computer Engineer
         </h2>
 
         {/* Organization */}
@@ -27,7 +27,7 @@ const Hero = () => {
         </div>
         
         <p className="text-xl text-muted-foreground">
-          Bagmati Province
+          Government of Bagamati Province
         </p>
 
         {/* Decorative Element */}

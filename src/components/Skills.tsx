@@ -18,20 +18,14 @@ const Skills = () => {
     { name: "Figma", category: "design" },
     { name: "C", category: "programming" },
     { name: "C++", category: "programming" },
-    { name: "C#", category: "programming" },
-    { name: ".NET", category: "backend" },
     { name: "Python", category: "programming" },
     { name: "Django", category: "backend" },
-    { name: "Flask", category: "backend" },
-    { name: "pandas", category: "data" },
     { name: "Node.js", category: "backend" },
-    { name: "Express.js", category: "backend" },
     { name: "Apps Script", category: "automation" },
     { name: "SQL", category: "database" },
     { name: "MySQL", category: "database" },
     { name: "SQLite", category: "database" },
     { name: "PostgreSQL", category: "database" },
-    { name: "MongoDB", category: "database" },
   ];
 
   const categories = [
