@@ -62,8 +62,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <span>Made with</span>
-            <Heart className="h-4 w-4 text-red-500" />
+            <span>Made</span>
             <span>by ER. Saroj Acharya</span>
           </div>
         </div>

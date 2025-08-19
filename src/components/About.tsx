@@ -19,11 +19,11 @@ const About = () => {
             <div className="space-y-3">
               <div>
                 <h4 className="font-semibold">Bachelor of Engineering</h4>
-                <p className="text-sm text-muted-foreground">Computer Science</p>
+                <p className="text-sm text-muted-foreground">Computer Engineering (2017-2022)</p>
               </div>
               <div>
                 <h4 className="font-semibold">Master in Public Administration</h4>
-                <p className="text-sm text-muted-foreground">Currently Pursuing</p>
+                <p className="text-sm text-muted-foreground">Currently Pursuing (2025-Present)</p>
               </div>
             </div>
           </CardContent>
@@ -40,8 +40,8 @@ const About = () => {
           <CardContent>
             <div className="space-y-3">
               <div>
-                <h4 className="font-semibold">Government Developer</h4>
-                <p className="text-sm text-muted-foreground">Hetauda, Bagmati Province</p>
+                <h4 className="font-semibold">Government Officer</h4>
+                <p className="text-sm text-muted-foreground">Offcie of the Chief Minister and Council of Ministers</p>
               </div>
               <p className="text-sm">
                 Developing digital solutions for government services, 

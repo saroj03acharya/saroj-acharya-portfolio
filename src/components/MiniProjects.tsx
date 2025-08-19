@@ -6,7 +6,7 @@ import SkillQuiz from "@/components/projects/SkillQuiz";
 const MiniProjects = () => {
   return (
     <section className="animate-slide-up">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Interactive Demos</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Interactive Fields</h2>
       
       <div className="space-y-8 max-w-6xl mx-auto">
         {/* Resume Timeline */}
