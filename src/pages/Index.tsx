@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Moon, Sun, Download, Coffee, MapPin, GraduationCap, Briefcase } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Hero from "@/components/Hero";
+import Overview from "@/components/Overview";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import MiniProjects from "@/components/MiniProjects";
@@ -51,6 +52,7 @@ const Index = () => {
 
       <main className="container mx-auto px-4 space-y-16">
         <Hero />
+        <Overview/>
         <About />
         <Skills />
         <MiniProjects />

@@ -6,7 +6,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-8">
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center gap-4">
+
             <a
               href="https://www.facebook.com/adelinmoshy/"
               target="_blank"
@@ -53,16 +54,11 @@ const Footer = () => {
               <Github className="h-5 w-5 text-primary" />
             </a>
           </div>
-
-          
-
           {/* Copyright */}
-          <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <span>Copy Right Er. Saroj Acharya © 2025</span>
-            
+          <div className="flex items-center justify-center gap-1 text-sm text-muted-foreground">
+            <span>Copyright Er. Saroj Acharya © 2025</span>
           </div>
         </div>
-      </div>
     </footer>
   );
 };

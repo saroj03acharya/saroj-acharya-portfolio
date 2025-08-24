@@ -8,24 +8,13 @@ const ResumeTimeline = () => {
 
   const timelineItems = [
     {
-      id: 1,
-      type: "education",
-      title: "Bachelor of Engineering",
-      subtitle: "Computer Engineering",
-      location: "Nepal",
-      period: "2017 - 2022",
-      description: "Graduated with honors, specialized in computer engineering and web development. Completed capstone project on government digital services.",
-      icon: GraduationCap,
-      color: "text-blue-600"
-    },
-    {
-      id: 2,
+      id: 4,
       type: "work",
-      title: "Lecture",
-      subtitle: "Bachelor of Information Technology",
-      location: "Kawasoti, Nawalparasi",
-      period: "2022 - 2023",
-      description: "",
+      title: "System and Project Management",
+      subtitle: "Infomation and Communication Coordination Section",
+      location: "Office of the Chief Minister and Council of Ministers",
+      period: "2024 - Present",
+      description: "Leading development of digital government solutions, implementing modern web technologies for citizen services and administrative efficiency.Developed citizen service portals and administrative systems. Worked on digitizing government processes and improving accessibility.",
       icon: Briefcase,
       color: "text-green-600"
     },
@@ -42,16 +31,30 @@ const ResumeTimeline = () => {
       color: "text-blue-600"
     },
     {
-      id: 4,
+      id: 2,
       type: "work",
-      title: "System and Project Management",
-      subtitle: "Infomation and Communication Coordination Section",
-      location: "Office of the Chief Minister and Council of Ministers",
-      period: "2024 - Present",
-      description: "Leading development of digital government solutions, implementing modern web technologies for citizen services and administrative efficiency.Developed citizen service portals and administrative systems. Worked on digitizing government processes and improving accessibility.",
+      title: "Lecture",
+      subtitle: "Bachelor of Information Technology",
+      location: "Kawasoti, Nawalparasi",
+      period: "2022 - 2023",
+      description: "",
       icon: Briefcase,
       color: "text-green-600"
+    },
+    {
+      id: 1,
+      type: "education",
+      title: "Bachelor of Engineering",
+      subtitle: "Computer Engineering",
+      location: "Nepal",
+      period: "2017 - 2022",
+      description: "Graduated with honors, specialized in computer engineering and web development. Completed capstone project on government digital services.",
+      icon: GraduationCap,
+      color: "text-blue-600"
     }
+    
+    
+    
   ];
 
   return (

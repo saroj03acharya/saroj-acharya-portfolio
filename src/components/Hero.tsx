@@ -23,12 +23,8 @@ const Hero = () => {
         {/* Organization */}
         <div className="flex items-center justify-center gap-2 text-lg text-muted-foreground mb-8">
           <MapPin className="h-5 w-5" />
-          <span>Office of the Chief Minister and Council of Ministers</span>
+          <a href="https://maps.app.goo.gl/raa5VAxVVNufwnim6" target="_blank" rel="noopener noreferrer" className="hover:underline text-blue-600 dark:text-blue-400"> Office of the Chief Minister and Council of Ministers, Hetauda</a>
         </div>
-        
-        <p className="text-xl text-muted-foreground">
-          Government of Bagamati Province
-        </p>
 
         {/* Decorative Element */}
         <div className="mt-12 w-24 h-1 hero-gradient mx-auto rounded-full"></div>
